@@ -3,16 +3,30 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 130px;
-  gap: 1rem;
+  width: 150px;
+  height: 180px;
+  background-color: #ffffff33;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: #00000088 0px 0px 10px;
+  padding: 10px;
 }
 
 .chest-img {
-    height: 120px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.chest-coins {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #ffe600;
+  margin-bottom: 5px;
 }
 
 .chest-number {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #000;
+    color: #fff;
+    margin-top: 10px;
 }

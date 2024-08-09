@@ -1,7 +1,6 @@
 import ChestImg from '../assets/chest.svg';
 import MonsterImg from '../assets/monster.svg';
 import CoinImg from '../assets/coin.svg';
-import { useState } from 'react';
 
 import '../styles/components/Chest.css';
 
@@ -9,21 +8,20 @@ type ChestProps = {
   chestNumber: number;
   isMonster: boolean;
   coins: number;
-  getChestValue: () => void;
+  isOpen: boolean;
+  selectChest: () => void;
 }
 
-function Chest({ chestNumber, isMonster, coins, getChestValue }: ChestProps) {
-  const [isOpen, setIsOpen] = useState(false);
-
+function Chest({ chestNumber, isMonster, coins, selectChest, isOpen }: ChestProps) {
   if(isOpen) {
     return (
       <div className="chest-container">
+        {!isMonster && <span className="chest-coins">{coins} coins</span>}
         <img
           className="chest-img"
           src={isMonster ? MonsterImg : CoinImg}
           alt={`Image of chest number ${chestNumber}`}
         />
-        {!isMonster && <p className="chest-number">{coins} coins</p>}
         <span className="chest-number">{chestNumber}</span>
       </div>
     )
@@ -34,9 +32,7 @@ function Chest({ chestNumber, isMonster, coins, getChestValue }: ChestProps) {
       onClick={
         () => {
           if(isOpen) return;
-
-          getChestValue()
-          setIsOpen(true)
+          selectChest()
         } 
     }>
       <img className="chest-img" src={ChestImg} alt={`Image of chest number ${chestNumber}`} />

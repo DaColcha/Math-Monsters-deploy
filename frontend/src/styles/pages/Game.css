@@ -3,17 +3,81 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.go-back {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  padding: 15px 15px;
+  background-color: #ffffff00;
+  border: 1px solid #fffb00;
+  color: #fffb00;
+  border-radius: 10px;
+  box-shadow: #fffb00 0 0 10px;
+}
+
+.chest-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.chest-selection h1 {
+  color: #fffb00;
+  text-shadow: #ffffff 0px 0px 3px;
 }
 
 .chests-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 1rem;
 }
 
 .game-info-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 4rem;
+  padding: 0 5rem;
+}
+
+.game-info-container p {
+  text-align: center;
+}
+
+.selected-chest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  background-color: #fffb0044;
+  border-radius: 15px;
+  box-shadow: #ffffff88 0px 0px 10px;
+  border: 2px solid #fffb00;
+  padding: 10px;
+  font-weight: bold;
+  color: #fffb00;
+}
+
+.character {
+  height: 150px;
+  object-fit: contain;
+}
+
+.coins-earned {
+  font-size: 1.4rem;
+  margin: 0;
+  color: #fffb00;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #fffb0044;
+  border-radius: 10px;
+  box-shadow: #ffffff88 0px 0px 10px;
+  border: 2px solid #fffb00;
 }
