@@ -9,12 +9,19 @@ import btnKnight from "../assets/knight-btn.svg";
 import btnDino from "../assets/dino-btn.svg";
 import info from "../assets/info.svg";
 import "../styles/pages/Home.css";
+import { CustomModal } from "../components/Modal";
+import { useState } from "react";
+
 
 function Home() {
   const { setPage, character, setCharacter } = useGlobalContext();
+  const [open, setOpen] = useState(false);
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
 
   return (
     <div className="home-page-container">
+      <CustomModal isOpen={open} onCloseModal={onCloseModal}/>
       <div className="header">
         <img
           tabIndex={0}
@@ -33,6 +40,11 @@ function Home() {
               width="194px"
               height="164px"
               onClick={() => setCharacter("KNIGHT")}
+              onKeyPress={(event) => {
+                if (event.key === "Enter") {
+                  setCharacter("KNIGHT");
+                }
+              }}
               className="select-character"
               alt="Seleccionar personaje"
             />
@@ -45,6 +57,11 @@ function Home() {
               width="194px"
               height="164px"
               onClick={() => setCharacter("DINO")}
+              onKeyPress={(event) => {
+                if (event.key === "Enter") {
+                  setCharacter("DINO");
+                }
+              }}
               className="select-character"
               alt="Seleccionar personaje"
             />
@@ -57,6 +74,11 @@ function Home() {
               width="194px"
               height="164px"
               onClick={() => setCharacter("PRINCESS")}
+              onKeyPress={(event) => {
+                if (event.key === "Enter") {
+                  setCharacter("PRINCESS");
+                }
+              }}
               className="select-character"
               alt="Seleccionar personaje"
             />
@@ -70,6 +92,12 @@ function Home() {
             height="44px"
             className="info"
             alt="Información"
+            onClick={onOpenModal}
+            onKeyPress={(event) => {
+              if (event.key === "Enter") {
+                onOpenModal();
+              }
+            }}
           />
         </div>
       </div>
@@ -78,6 +106,11 @@ function Home() {
           tabIndex={0}
           role="button"
           onClick={() => setPage("GAME")}
+          onKeyPress={(event) => {
+            if (event.key === "Enter") {
+              setPage("GAME");
+            }
+          }}
           alt="Iniciar juego"
           src={botonIniciar}
           width="505px"

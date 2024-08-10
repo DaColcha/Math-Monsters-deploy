@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Love+Ya+Like+A+Sister&display=swap');
+
+.customModal {
+    background-image: url("../../assets/wooden_sign_2.svg") !important;
+    background-size: cover !important;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px !important;
+    background-color: transparent !important;
+    margin-top: 0 !important;
+    vertical-align: top !important;
+}
+
+.info-text {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 280px;
+  padding: 13px;
+}
+
+.info-text h2 {
+  color:  #f5a200;
+  
+  font-family: "Irish Grover";
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 400;
+
+  text-shadow: 3px 3px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+
+}
+
+.info-text .paragraph {
+  color: #fff;
+  text-align: center;
+
+  /* normal */
+  font-family: "Love Ya Like A Sister";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 1px !important;
+}
+
+.info-text .footer {
+  color: var(--logoStroke, #fff);
+  text-shadow: 0px 1px 2px #f9c849;
+
+  /* titulo_3 */
+  font-family: "Irish Grover";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+
+  text-align: end;
+}
+
+.react-responsive-modal-closeButton{
+    right: 1px !important;
+}
