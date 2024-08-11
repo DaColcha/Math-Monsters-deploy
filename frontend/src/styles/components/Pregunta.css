@@ -1,0 +1,117 @@
+.question-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .question-modal-content {
+    width: 85%;
+    height: 80%;
+    background-size: cover;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .question-modal-text {
+    color: #FFF5E1;
+    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+    text-align: center;
+    height: 68%;
+    width: 95%;
+  }
+  
+  .question-modal-text h1 {
+    padding: 2% 2%;
+    font-size: 5rem;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+  }
+  .Pregunta {
+    margin-top: 1rem;
+    height: 40%;
+    padding-top: 20px;
+    display: flex;             /* Enable flexbox */
+    justify-content: center;   /* Center horizontally */
+    align-items: center;       /* Center vertically */
+    width: 100%;               /* Use full width if needed */
+    text-align: center;        /* Center text horizontally */
+  }
+  
+  .Pregunta p {
+    font-family: 'Courier New', Courier, monospace;
+    color: #FFF5E1;
+    font-size: 2.5rem;
+    margin: 0;                 
+  }
+  
+  .question-modal-options-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;  /* Adjusted for equal spacing */
+    width: 90%;
+    height: 15%;
+  }
+  
+  .question-modal-option {
+    background-color: #462B1B;
+    width: 33%;
+    height: 90%;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;  /* Centers text within the button */
+    flex-grow: 1;  /* Allows buttons to grow and fill space */
+    margin: 0 10px;  /* Adds horizontal spacing between buttons */
+  }
+  
+  .question-modal-option:hover {
+    background-color: #A0522D;
+    font-family: 'Courier New', Courier, monospace;
+
+  }
+  
+  .question-modal-close-container {
+    margin-top: 30px;
+
+  }
+  
+  .question-modal-close {
+    background-color: #A52A2A;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .question-modal-close:hover {
+    background-color: #B22222;
+  }
+  .question-modal-option.correct {
+    background-color: #4CAF50; /* Green background for correct answer */
+    color: white;
+  }
+  
+  .question-modal-option.incorrect {
+    background-color: #F44336; /* Red background for incorrect answer */
+    color: white;
+  }
+  
