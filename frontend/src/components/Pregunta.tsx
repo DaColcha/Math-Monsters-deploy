@@ -68,9 +68,9 @@ const Pregunta: React.FC<QuestionModalProps> = ({ isOpen, question, onClose, onF
     const isCorrect = answer === question?.respuesta;
     const feedbackMessage = isCorrect 
       ? `${question.pasos || ''}`
-      : `La respuesta correcta es: ${question?.respuesta} ${question?.pasos || ''}`;
+      : `Respuesta correcta: ${question?.respuesta} Pasos: ${question?.pasos || ''}`;
     onFeedbackOpen(feedbackMessage, isCorrect);
-    onClose(); // Close the question modal
+    onClose(); // Close the question modal 
   };
 
   if (!isOpen || !question) return null;

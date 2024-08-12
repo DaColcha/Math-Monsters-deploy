@@ -10,20 +10,20 @@ const Peguntas: QuestionType[] = [
     {
         pregunta: "Encuentra el 6to término de la sucesión dado su término general: an = n^2",
         respuesta: "36", // Convertir la respuesta a string
-        opciones: ["12", "24", "66"], // Convertir las opciones a string
+        opciones: ["12", "24", "36", "72"], // Convertir las opciones a string
         pasos: "a6 = 6^2 = 6x6 = 36"
     },
     {
         pregunta: "Encuentra el término a1 dado: a4 = 11, a5 = 14",
         respuesta: "2", // Convertir la respuesta a string
         opciones: ["3", "4", "9", "2"], // Convertir las opciones a string
-        pasos: "d = a5 - a4 = 14 - 11 ;"
+        pasos: "d = a5 - a4 = 14 - 11"
     },
     {
         pregunta: "Encuentra el término a1 dado: a4 = 23, d =4",
         respuesta: "11", // Convertir la respuesta a string
         opciones: ["8", "5", "15", "11"], // Convertir las opciones a string
-        pasos: "23 = a1 +4(4-1)"
+        pasos: "Despejar: 23 = a1 +4(4-1)"
     },
     {
         pregunta: "¿Qué característica distingue a una progresión geométrica decreciente?",
@@ -69,13 +69,13 @@ const Peguntas: QuestionType[] = [
         pregunta: "Si el séptimo término de una progresión aritmética es 21 y el primer término es 3, ¿cuál es la diferencia común?",
         opciones: ["2", "3", "4", "6"], // Convertir las opciones a string
         respuesta: "3", // Convertir la respuesta a string
-        pasos: "21 = 3 +d(7-1)"
+        pasos: "21 = 3 + d(7-1)"
     },
     {
         pregunta: "Si el cuarto término de una progresión geométrica es 54 y el primer término es 2, ¿cuál es la razón común?",
         opciones: ["3", "8", "27", "9"], // Convertir las opciones a string
         respuesta: "3", // Convertir la respuesta a string
-        pasos: "54 = 2 * r ^(3)"
+        pasos: "Despejar r: 54 = 2 * r^(3)"
     },
 ]
 
