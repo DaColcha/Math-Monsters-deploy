@@ -16,13 +16,15 @@ function Chest({ chestNumber, isMonster, coins, selectChest, isOpen }: ChestProp
   if(isOpen) {
     return (
       <div className="chest-container">
-        {!isMonster && <span className="chest-coins">{coins} coins</span>}
+        {!isMonster && <span className="chest-coins">{coins} monedas</span>}
         <img
           className="chest-img"
           src={isMonster ? MonsterImg : CoinImg}
-          alt={`Image of chest number ${chestNumber}`}
+          alt={`Imagen del cofre número ${chestNumber}`}
         />
-        <span className="chest-number">{chestNumber}</span>
+        <span className="chest-number">
+          Cofre {chestNumber}
+          </span>
       </div>
     )
   }
@@ -35,7 +37,7 @@ function Chest({ chestNumber, isMonster, coins, selectChest, isOpen }: ChestProp
           selectChest()
         } 
     }>
-      <img className="chest-img" src={ChestImg} alt={`Image of chest number ${chestNumber}`} />
+      <img className="chest-img" src={ChestImg} alt={`Imagen del cofre número ${chestNumber}`} />
       <span className="chest-number">{chestNumber}</span>
     </div>
   )

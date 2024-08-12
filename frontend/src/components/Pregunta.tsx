@@ -79,7 +79,7 @@ const Pregunta: React.FC<QuestionModalProps> = ({ isOpen, question, onClose, onF
     <div className="question-modal-overlay" onKeyDown={handleKeyDown} aria-labelledby="modalTitle" role="dialog" aria-modal="true">
       <div className="question-modal-content" style={{ backgroundImage: `url(${fondo})` }}>
         <div className="question-modal-text" ref={questionRef} tabIndex={-1} aria-live="assertive">
-          <h1>Pregunta</h1>
+          <h1 className='Pregunta'>Pregunta</h1>
           <div className='Pregunta'>
             <p>{question?.pregunta}</p>
           </div>
