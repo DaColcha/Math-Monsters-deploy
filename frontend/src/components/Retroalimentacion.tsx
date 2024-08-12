@@ -55,8 +55,16 @@ const Retroalimentacion: React.FC<RetroalimentacionProps> = ({ isOpen, content, 
                     margin: '30px 0'
                     }}>{isCorrect ? '¡Correcto!' : 'Incorrecto'}
                 </h1>
-                    <div className="Pregunta" tabIndex={-1}>
-                        <p>{content}</p>
+                    <div className="Pregunta" tabIndex={-1}
+                    style={{
+                        display:'flex',
+                        flexDirection: 'column'
+                
+                    }}>
+                        {content.split("\n").map(contenido =>
+                                                   
+                            (<p>{contenido}</p>)
+                        )}
                     </div>
                 </div>
                 <div className="question-modal-close-container">

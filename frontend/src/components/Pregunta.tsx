@@ -67,8 +67,11 @@ const Pregunta: React.FC<QuestionModalProps> = ({ isOpen, question, onClose, onF
     setSelectedAnswer(answer);
     const isCorrect = answer === question?.respuesta;
     const feedbackMessage = isCorrect 
-      ? `${question.pasos || ''}`
-      : `Respuesta correcta: ${question?.respuesta} Pasos: ${question?.pasos || ''}`;
+    ? `${question.pasos || ''}` 
+    : `Respuesta correcta: ${question?.respuesta}${question?.pasos ? 
+      `\nPasos para la solución: 
+      \n ${question.pasos}` : ''}`;
+  
     onFeedbackOpen(feedbackMessage, isCorrect);
     onClose(); // Close the question modal 
   };
