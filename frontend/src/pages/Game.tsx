@@ -126,7 +126,7 @@ function Game() {
                 <h1 ref={chestSelectionRef} tabIndex={0}>Elige un cofre</h1>
                 <div className="chests-container">
                     {cofres.map((cofre, index) => (
-                        <Chest
+                         <Chest
                             key={index}
                             chestNumber={cofre.chestNumber}
                             isMonster={cofre.isMonster}

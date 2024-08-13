@@ -67,10 +67,13 @@ const Pregunta: React.FC<QuestionModalProps> = ({ isOpen, question, onClose, onF
     setSelectedAnswer(answer);
     const isCorrect = answer === question?.respuesta;
     const feedbackMessage = isCorrect 
-      ? `${question.pasos || ''}`
-      : `La respuesta correcta es: ${question?.respuesta} ${question?.pasos || ''}`;
+    ? `${question.pasos || ''}` 
+    : `Respuesta correcta: ${question?.respuesta}${question?.pasos ? 
+      `\nPasos para la solución: 
+      \n ${question.pasos}` : ''}`;
+  
     onFeedbackOpen(feedbackMessage, isCorrect);
-    onClose(); // Close the question modal
+    onClose(); // Close the question modal 
   };
 
   if (!isOpen || !question) return null;
@@ -79,7 +82,7 @@ const Pregunta: React.FC<QuestionModalProps> = ({ isOpen, question, onClose, onF
     <div className="question-modal-overlay" onKeyDown={handleKeyDown} aria-labelledby="modalTitle" role="dialog" aria-modal="true">
       <div className="question-modal-content" style={{ backgroundImage: `url(${fondo})` }}>
         <div className="question-modal-text" ref={questionRef} tabIndex={-1} aria-live="assertive">
-          <h1>Pregunta</h1>
+          <h1 className='Pregunta'>Pregunta</h1>
           <div className='Pregunta'>
             <p>{question?.pregunta}</p>
           </div>
