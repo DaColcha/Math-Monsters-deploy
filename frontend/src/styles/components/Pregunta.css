@@ -90,18 +90,20 @@
   }
   
   .question-modal-close-container {
-    margin-top: 15px;
+    margin-top: 25px;
 
   }
   
   .question-modal-close {
-    background-color: #A52A2A;
+    background-color: #F44336;
     color: white;
     padding: 10px 20px;
     font-size: 1.2rem;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
+    width: 40rem;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 1);
   }
   
   .question-modal-close:hover {

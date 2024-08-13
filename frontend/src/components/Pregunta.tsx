@@ -69,7 +69,9 @@ const Pregunta: React.FC<QuestionModalProps> = ({ isOpen, question, onClose, onF
     const feedbackMessage = isCorrect 
     ? `${question.pasos || ''}` 
     : `Respuesta correcta: ${question?.respuesta}${question?.pasos ? 
-      `\nPasos para la solución: 
+     
+      `<br>
+      \nPasos para la solución: 
       \n ${question.pasos}` : ''}`;
   
     onFeedbackOpen(feedbackMessage, isCorrect);

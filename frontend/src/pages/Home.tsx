@@ -63,7 +63,7 @@ const Home = () => {
     if (retorno) {
       setRetorno(false);
     } else {
-      setAnnouncement(`Personaje cambiado a ${character}`);
+      setAnnouncement(`Personaje: ${character}`);
     }
   }, [character, retorno, setRetorno]);
 
@@ -95,7 +95,7 @@ const Home = () => {
           <div
             aria-live="assertive"
             className="announcement"
-            style={{ color: 'white' }}
+            style={{ color: 'white'}}
           >
             {announcement}
           </div>

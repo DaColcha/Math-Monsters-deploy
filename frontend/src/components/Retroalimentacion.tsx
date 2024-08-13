@@ -50,21 +50,25 @@ const Retroalimentacion: React.FC<RetroalimentacionProps> = ({ isOpen, content, 
         <div className="question-modal-overlay" onKeyDown={handleKeyDown} aria-labelledby="feedbackTitle" role="dialog" aria-modal="true">
             <div className="question-modal-content" style={{ backgroundImage: `url(${fondo})` }}>
                 <div className="question-modal-text" tabIndex={-1} ref={contentRef}>
-                <h1 style={{ 
-                    color: isCorrect ? 'green' : 'red',
-                    margin: '30px 0'
+                    <h1 style={{
+                        color: isCorrect ? 'green' : 'red',
+                        margin: '30px 0'
                     }}>{isCorrect ? '¡Correcto!' : 'Incorrecto'}
-                </h1>
+                    </h1>
                     <div className="Pregunta" tabIndex={-1}
-                    style={{
-                        display:'flex',
-                        flexDirection: 'column'
-                
-                    }}>
-                        {content.split("\n").map(contenido =>
-                                                   
-                            (<p>{contenido}</p>)
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column'
+
+                        }}>
+                        {content.split(/(\n|<br>)/).map((fragmento, index) =>
+                            fragmento === '\n' || fragmento === '<br>' ? (
+                                <br key={index} />
+                            ) : (
+                                <p key={index}>{fragmento}</p>
+                            )
                         )}
+
                     </div>
                 </div>
                 <div className="question-modal-close-container">
