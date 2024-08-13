@@ -28,16 +28,37 @@ const Finalizar: React.FC<FinalizarProps> = ({ Monedas, onClose }) => {
     };
 
     return (
-        <div className="question-modal-overlay" onKeyDown={handleKeyDown} aria-labelledby="finalizarTitle" role="dialog" aria-modal="true">
-            <div className="question-modal-content" style={{ backgroundImage: `url(${fondo})` }}>
-                <div className="question-modal-text" tabIndex={-1} ref={contentRef}>
+        <div 
+            className="question-modal-overlay" 
+            onKeyDown={handleKeyDown} 
+            aria-labelledby="finalizarTitle" 
+            role="dialog" 
+            aria-modal="true"
+        >
+            <div 
+                className="question-modal-content" 
+                style={{ backgroundImage: `url(${fondo})` }} 
+                role="document"
+            >
+                <div 
+                    className="question-modal-text" 
+                    tabIndex={-1} 
+                    ref={contentRef}
+                >
                     <h1 id="finalizarTitle" style={{margin: '30px 0'}}>Juego Terminado</h1>
                     <div className="Pregunta" tabIndex={-1}>
                         <p>Monedas recolectadas: {Monedas}</p>
                     </div>
                 </div>
                 <div className="question-modal-close-container">
-                    <button ref={closeButtonRef} className="question-modal-close" onClick={onClose}>Regresar</button>
+                    <button 
+                        ref={closeButtonRef} 
+                        className="question-modal-close" 
+                        onClick={onClose} 
+                        role="button"
+                    >
+                        Regresar
+                    </button>
                 </div>
             </div>
         </div>
@@ -45,4 +66,5 @@ const Finalizar: React.FC<FinalizarProps> = ({ Monedas, onClose }) => {
 }
 
 export default Finalizar;
+
 

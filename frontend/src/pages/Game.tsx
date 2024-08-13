@@ -121,7 +121,7 @@ function Game() {
 
     return (
         <div className="game-container">
-            <button tabIndex={0} className="go-back" onClick={() => setPage('HOME')} disabled={showPopup || showFeedback || showGameOver}>⬅ Volver a inicio</button>
+            <button tabIndex={0} className="go-back" onClick={() => setPage('HOME')} disabled={showPopup || showFeedback || showGameOver} role="button">⬅ Volver a inicio</button>
             <div className={`chest-selection ${showPopup || showFeedback || showGameOver ? 'disabled' : ''}`}>
                 <h1 ref={chestSelectionRef} tabIndex={0}>Elige un cofre</h1>
                 <div className="chests-container">
@@ -144,12 +144,13 @@ function Game() {
                         tabIndex={0}
                         src={cofreSeleccionado?.isMonster ? MonsterImg : Coins}
                         alt={cofreSeleccionado ? `Imagen del cofre número ${cofreSeleccionado.chestNumber} ${cofreSeleccionado.isMonster ? 'con un monstruo' : 'con monedas'}` : 'Selecciona un cofre'}
+                        role="img"
                     />
                     <p tabIndex={0}>{cofreSeleccionado ? `Cofre número ${cofreSeleccionado.chestNumber}` : 'Ningún cofre seleccionado'}</p>
                 </div>
-                <img tabIndex={0} src={personajeImage} alt={`Tu personaje, ${character}`} className="character" />
+                <img tabIndex={0} src={personajeImage} alt={`Tu personaje, ${character}`} className="character" role="img" />
                 <p tabIndex={0} className="coins-earned">{totalMonedas} monedas ganadas</p>
-                <div aria-live="polite" className="chest-result visually-hidden" tabIndex={-1}>
+                <div aria-live="polite" className="chest-result visually-hidden" tabIndex={-1} role="alert">
                     {resultado && <p>{resultado}</p>}
                 </div>
             </div>
@@ -171,7 +172,7 @@ function Game() {
                 />
             )}
             {showGameOver && (
-              <Finalizar Monedas={totalMonedas} onClose={() => setPage('HOME')} />
+              <Finalizar Monedas={totalMonedas} onClose={() => setPage('HOME')}  />
             )}
         </div>
     );

@@ -13,7 +13,7 @@
   padding: 15px 15px;
   background-color: #ffffff00;
   border: 1px solid #fffb00;
-  color: #fffb00;
+  color: #FFFFFF;
   border-radius: 10px;
   box-shadow: #fffb00 0 0 10px;
 }
@@ -27,7 +27,7 @@
 }
 
 .chest-selection h1 {
-  color: #fffb00;
+  color: #FFFFff;
   text-shadow: #ffffff 0px 0px 3px;
 }
 
@@ -56,13 +56,13 @@
   align-items: center;
   justify-content: center;
   width: 150px;
-  background-color: #fffb0044;
+  background-color: #F39C12;
   border-radius: 15px;
   box-shadow: #ffffff88 0px 0px 10px;
   border: 2px solid #fffb00;
   padding: 10px;
   font-weight: bold;
-  color: #fffb00;
+  color: #FFFFFF;
 }
 
 .character {
@@ -73,10 +73,10 @@
 .coins-earned {
   font-size: 1.4rem;
   margin: 0;
-  color: #fffb00;
+  color: #ffffff;
   font-weight: bold;
   padding: 10px;
-  background-color: #fffb0044;
+  background-color: #F39C12;
   border-radius: 10px;
   box-shadow: #ffffff88 0px 0px 10px;
   border: 2px solid #fffb00;

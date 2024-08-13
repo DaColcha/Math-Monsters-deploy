@@ -77,6 +77,7 @@ const Home = () => {
           height="380px"
           alt="Math Monsters"
           aria-label="Math Monsters logo"
+          role="img"
         />
         <div className="character-info" style={{ margin: '0 20px 20px 0' }}>
           <img
@@ -96,6 +97,7 @@ const Home = () => {
             aria-live="assertive"
             className="announcement"
             style={{ color: 'white'}}
+            role="alert"
           >
             {announcement}
           </div>
@@ -142,6 +144,7 @@ const Home = () => {
           width="227px"
           height="320px"
           alt="Princesa"
+          role="img"
         />
       )}
       {character === "CABALLERO" && (
@@ -151,6 +154,7 @@ const Home = () => {
           width="227px"
           height="320px"
           alt="Caballero"
+          role="img"
         />
       )}
       {character === "DINOSAURIO" && (
@@ -160,6 +164,7 @@ const Home = () => {
           width="227px"
           height="320px"
           alt="Dinosaurio"
+          role="img"
         />
       )}
       </div>
@@ -169,4 +174,3 @@ const Home = () => {
 };
 
 export default Home;
-

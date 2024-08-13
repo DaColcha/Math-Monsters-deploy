@@ -48,9 +48,9 @@ const Retroalimentacion: React.FC<RetroalimentacionProps> = ({ isOpen, content, 
 
     return (
         <div className="question-modal-overlay" onKeyDown={handleKeyDown} aria-labelledby="feedbackTitle" role="dialog" aria-modal="true">
-            <div className="question-modal-content" style={{ backgroundImage: `url(${fondo})` }}>
-                <div className="question-modal-text" tabIndex={-1} ref={contentRef}>
-                    <h1 style={{
+            <div className="question-modal-content" style={{ backgroundImage: `url(${fondo})` }} role="document">
+                <div className="question-modal-text" tabIndex={-1} ref={contentRef} aria-live="assertive">
+                    <h1 id="feedbackTitle" style={{
                         color: isCorrect ? 'green' : 'red',
                         margin: '30px 0'
                     }}>{isCorrect ? '¡Correcto!' : 'Incorrecto'}
@@ -59,7 +59,6 @@ const Retroalimentacion: React.FC<RetroalimentacionProps> = ({ isOpen, content, 
                         style={{
                             display: 'flex',
                             flexDirection: 'column'
-
                         }}>
                         {content.split(/(\n|<br>)/).map((fragmento, index) =>
                             fragmento === '\n' || fragmento === '<br>' ? (
@@ -68,11 +67,10 @@ const Retroalimentacion: React.FC<RetroalimentacionProps> = ({ isOpen, content, 
                                 <p key={index}>{fragmento}</p>
                             )
                         )}
-
                     </div>
                 </div>
                 <div className="question-modal-close-container">
-                    <button className="question-modal-close" onClick={onClose} ref={closeButtonRef}>Cerrar</button>
+                    <button className="question-modal-close" onClick={onClose} ref={closeButtonRef} role="button">Cerrar</button>
                 </div>
             </div>
         </div>

@@ -82,9 +82,9 @@ const Pregunta: React.FC<QuestionModalProps> = ({ isOpen, question, onClose, onF
 
   return (
     <div className="question-modal-overlay" onKeyDown={handleKeyDown} aria-labelledby="modalTitle" role="dialog" aria-modal="true">
-      <div className="question-modal-content" style={{ backgroundImage: `url(${fondo})` }}>
+      <div className="question-modal-content" style={{ backgroundImage: `url(${fondo})` }} role="document">
         <div className="question-modal-text" ref={questionRef} tabIndex={-1} aria-live="assertive">
-          <h1 className='Pregunta'>Pregunta</h1>
+          <h1 id="modalTitle" className='Pregunta'>Pregunta</h1>
           <div className='Pregunta'>
             <p>{question?.pregunta}</p>
           </div>
@@ -98,13 +98,14 @@ const Pregunta: React.FC<QuestionModalProps> = ({ isOpen, question, onClose, onF
               ref={index === 0 ? firstOptionRef : null}
               aria-live="polite"
               disabled={selectedAnswer !== null} // Disable options after one is selected
+              role="button"
             >
               {`${optionIdentifiers[index]}. ${opcion}`}
             </button>
           ))}
         </div>
         <div className="question-modal-close-container">
-          <button className="question-modal-close" ref={closeButtonRef} onClick={onClose}>Cerrar</button>
+          <button className="question-modal-close" ref={closeButtonRef} onClick={onClose} role="button">Cerrar</button>
         </div>
       </div>
     </div>
