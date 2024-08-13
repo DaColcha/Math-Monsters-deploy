@@ -27,15 +27,15 @@ const Home = () => {
   };
 
   const changeCharacter = () => {
-    if (character === "PRINCESS") {
+    if (character === "PRINCESA") {
       setPersonajeImage(Knight);
-      setCharacter("KNIGHT");
-    } else if (character === "KNIGHT") {
+      setCharacter("CABALLERO");
+    } else if (character === "CABALLERO") {
       setPersonajeImage(Dino);
-      setCharacter("DINO");
+      setCharacter("DINOSAURIO");
     } else {
       setPersonajeImage(Princess);
-      setCharacter("PRINCESS");
+      setCharacter("PRINCESA");
     }
 
     // Mantener el foco en el botón del personaje seleccionado
@@ -82,7 +82,7 @@ const Home = () => {
           <img
             tabIndex={0}
             role="button"
-            src={character === "PRINCESS" ? btnPrincess : character === "KNIGHT" ? btnKnight : btnDino}
+            src={character === "PRINCESA" ? btnPrincess : character === "CABALLERO" ? btnKnight : btnDino}
             width="194px"
             height="164px"
             onClick={changeCharacter}
@@ -135,7 +135,7 @@ const Home = () => {
           />
           
         </div>
-        {character === "PRINCESS" && (
+        {character === "PRINCESA" && (
         <img
           tabIndex={0}
           src={Princess}
@@ -144,7 +144,7 @@ const Home = () => {
           alt="Princesa"
         />
       )}
-      {character === "KNIGHT" && (
+      {character === "CABALLERO" && (
         <img
           tabIndex={0}
           src={Knight}
@@ -153,7 +153,7 @@ const Home = () => {
           alt="Caballero"
         />
       )}
-      {character === "DINO" && (
+      {character === "DINOSAURIO" && (
         <img
           tabIndex={0}
           src={Dino}

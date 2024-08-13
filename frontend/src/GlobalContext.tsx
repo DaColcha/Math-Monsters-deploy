@@ -16,7 +16,7 @@ const GlobalContext = createContext<contextType | undefined>(undefined)
 
 export function GlobalContextProvider({ children }: { children: ReactNode }) {
     const [page, setPage] = useState<string>('HOME')
-    const [character, setCharacter] = useState<string>('DINO')
+    const [character, setCharacter] = useState<string>('DINOSAURIO')
     const [personajeImage, setPersonajeImage] = useState<string>(image)
     const [retorno, setRetorno] = useState<boolean>(false)
  
