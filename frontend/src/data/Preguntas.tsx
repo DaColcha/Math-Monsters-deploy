@@ -33,7 +33,8 @@ const Peguntas: QuestionType[] = [
             "La razón común es un número negativo.",
             "La razón común es un número positivo menor que 1."
         ],
-        respuesta: "La razón común es un número positivo menor que 1."
+        respuesta: "La razón común es un número positivo menor que 1.",
+        pasos: "En una progresión geométrica decreciente, la razón común es un número positivo menor que 1."
     },
     {
         pregunta: "¿Qué ocurre con una progresión geométrica cuando la razón común es negativa?",
@@ -43,7 +44,8 @@ const Peguntas: QuestionType[] = [
             "La progresión es aritmética.",
             "Los términos decrecen sin alternar."
         ],
-        respuesta: "Los términos se alternan en signo."
+        respuesta: "Los términos se alternan en signo.",
+        pasos: "Una razón común negativa en una progresión geométrica hace que los términos se alternen en signo."
     },
     {
         pregunta: "¿Cuál de las siguientes secuencias representa una progresión aritmética?",
@@ -53,7 +55,8 @@ const Peguntas: QuestionType[] = [
             "2, 4, 8, 16, 32",
             "7, 14, 28, 56, 112"
         ],
-        respuesta: "5, 10, 15, 20, 25"
+        respuesta: "5, 10, 15, 20, 25",
+        pasos: "Esta secuencia tiene una diferencia común constante, lo que la convierte en una progresión aritmética."
     },
     {
         pregunta: "¿Qué condición debe cumplirse para que una progresión aritmética sea creciente?",
@@ -63,7 +66,8 @@ const Peguntas: QuestionType[] = [
             "El primer término debe ser mayor que la diferencia común.",
             "La suma de todos los términos debe ser positiva."
         ],
-        respuesta: "La diferencia común debe ser positiva."
+        respuesta: "La diferencia común debe ser positiva.",
+        pasos: "Para que una progresión aritmética sea creciente, la diferencia común entre los términos debe ser positiva."
     },
     {
         pregunta: "Si el séptimo término de una progresión aritmética es 21 y el primer término es 3, ¿cuál es la diferencia común?",

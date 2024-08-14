@@ -34,49 +34,48 @@ const Pregunta: React.FC<QuestionModalProps> = ({ isOpen, question, onClose, onF
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
     const focusableElements = [
-      questionRef.current,
-      ...Array.from(document.querySelectorAll('.question-modal-option')),
-      closeButtonRef.current,
+        questionRef.current,
+        ...Array.from(document.querySelectorAll('.question-modal-option')),
+        closeButtonRef.current,
     ].filter(Boolean) as HTMLElement[];
 
     const activeElement = document.activeElement as HTMLElement;
 
     if (event.key === 'Tab') {
-      event.preventDefault(); // Prevent default tab behavior
-      const currentIndex = focusableElements.indexOf(activeElement);
-      let nextIndex = currentIndex + (event.shiftKey ? -1 : 1);
+        event.preventDefault(); // Prevent default tab behavior
+        const currentIndex = focusableElements.indexOf(activeElement);
+        let nextIndex = currentIndex + (event.shiftKey ? -1 : 1);
 
-      if (nextIndex < 0) nextIndex = focusableElements.length - 1;
-      if (nextIndex >= focusableElements.length) nextIndex = 0;
+        if (nextIndex < 0) nextIndex = focusableElements.length - 1;
+        if (nextIndex >= focusableElements.length) nextIndex = 0;
 
-      focusableElements[nextIndex]?.focus();
+        focusableElements[nextIndex]?.focus();
     }
 
     if (event.key === 'Enter' && activeElement) {
-      if (activeElement.classList.contains('question-modal-option')) {
-        event.preventDefault(); // Prevent the event from propagating
-        handleSubmit((activeElement as HTMLButtonElement).textContent || '');
-      } else if (activeElement === closeButtonRef.current) {
-        event.preventDefault(); // Prevent the event from propagating
-        onClose();
-      }
+        if (activeElement.classList.contains('question-modal-option')) {
+            event.preventDefault(); // Prevent the event from propagating
+            const selectedText = (activeElement as HTMLButtonElement).textContent?.trim().split('. ')[1] || '';
+            handleSubmit(selectedText);
+        } else if (activeElement === closeButtonRef.current) {
+            event.preventDefault(); // Prevent the event from propagating
+            onClose();
+        }
     }
-  };
+};
 
-  const handleSubmit = (answer: string) => {
+const handleSubmit = (answer: string) => {
     setSelectedAnswer(answer);
     const isCorrect = answer === question?.respuesta;
     const feedbackMessage = isCorrect 
-    ? `${question.pasos || ''}` 
-    : `Respuesta correcta: ${question?.respuesta}${question?.pasos ? 
-     
-      `<br>
-      \nPasos para la solución: 
-      \n ${question.pasos}` : ''}`;
+        ? `${question.pasos || ''}` 
+        : `Respuesta correcta: ${question?.respuesta}${question?.pasos ? 
+        `<br>\nPasos para la solución:\n${question.pasos}` : ''}`;
   
     onFeedbackOpen(feedbackMessage, isCorrect);
     onClose(); // Close the question modal 
-  };
+};
+
 
   if (!isOpen || !question) return null;
 
@@ -103,9 +102,6 @@ const Pregunta: React.FC<QuestionModalProps> = ({ isOpen, question, onClose, onF
               {`${optionIdentifiers[index]}. ${opcion}`}
             </button>
           ))}
-        </div>
-        <div className="question-modal-close-container">
-          <button className="question-modal-close" ref={closeButtonRef} onClick={onClose} role="button">Cerrar</button>
         </div>
       </div>
     </div>
