@@ -44,11 +44,11 @@
   padding-top: 20px;
   padding-bottom: 20px;
   margin: 25px 0px; 
-  display: flex;             /* Enable flexbox */
-  justify-content: center;   /* Center horizontally */
-  align-items: center;       /* Center vertically */
-  width: 100%;               /* Use full width if needed */
-  text-align: center;        /* Center text horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
 }
 
 .Pregunta p {
@@ -59,20 +59,18 @@
 }
 
 .question-modal-options-container {
+  padding-bottom: 5%;
+  padding-top: 3%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;  /* Adjusted for equal spacing */
+  justify-content: space-around;
   width: 90%;
-  height: 30%;
+  height: auto;
 }
 
 .question-modal-option {
   background-color: #462B1B;
-  flex: 1 1 auto; /* Permite que los botones crezcan y se encojan según sea necesario */
-  height: auto;
-  max-width: 30%; /* Asegura que los botones no se agranden demasiado */
-  min-width: 20%; /* Asegura que los botones no se encojan demasiado */
+  flex-grow: 1; /* Permite que todos los botones crezcan equitativamente */
+  max-width: 25%; /* Limita el ancho máximo de los botones */
   padding: 12px 24px;
   border: none;
   color: white;
@@ -81,11 +79,15 @@
   border-radius: 20px;
   font-family: 'Courier New', Courier, monospace;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-  text-align: center;  /* Centers text within the button */
-  flex-grow: 1;  /* Allows buttons to grow and fill space */
-  margin: 0 10px;  /* Adds horizontal spacing between buttons */
-  word-wrap: break-word; /* Permite que el texto se envuelva si es muy largo */
-  white-space: normal; /* Permite que el texto se ajuste a varias líneas */
+  text-align: center;
+  margin: 0 10px;
+  word-wrap: break-word;
+  white-space: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto; /* Deja que la altura se ajuste según el contenido */
+  min-width: 150px; /* Asegura un tamaño mínimo para todos los botones */
 }
 
 .question-modal-option:hover {
@@ -93,12 +95,12 @@
 }
 
 .question-modal-option.correct {
-  background-color: #4CAF50; /* Green background for correct answer */
+  background-color: #4CAF50; 
   color: white;
 }
 
 .question-modal-option.incorrect {
-  background-color: #F44336; /* Red background for incorrect answer */
+  background-color: #F44336; 
   color: white;
 }
 
@@ -121,6 +123,3 @@
 .question-modal-close:hover {
   background-color: #B22222;
 }
-
-
-  
