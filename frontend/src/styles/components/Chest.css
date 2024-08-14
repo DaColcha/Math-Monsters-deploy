@@ -5,11 +5,16 @@
   justify-content: center;
   width: 150px;
   height: 180px;
-  background-color: #ffffff33;
+  background: linear-gradient(0deg, #000, #7a4f0a);
   border-radius: 15px;
   cursor: pointer;
   box-shadow: #00000088 0px 0px 10px;
   padding: 10px;
+  transition: 0.9s ease background;
+}
+
+.chest-container:hover, .chest-container:focus {
+  background: linear-gradient(0deg, #000, #746a3b);
 }
 
 .chest-img {

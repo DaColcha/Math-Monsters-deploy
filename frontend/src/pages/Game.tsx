@@ -123,7 +123,7 @@ function Game() {
         <div className="game-container">
             <button tabIndex={0} className="go-back" onClick={() => setPage('HOME')} disabled={showPopup || showFeedback || showGameOver} role="button">⬅ Volver a inicio</button>
             <div className={`chest-selection ${showPopup || showFeedback || showGameOver ? 'disabled' : ''}`}>
-                <h1 ref={chestSelectionRef} tabIndex={0}>Elige un cofre</h1>
+                <h1 ref={chestSelectionRef} tabIndex={0}>¡ Elige un cofre !</h1>
                 <div className="chests-container">
                     {cofres.map((cofre, index) => (
                          <Chest

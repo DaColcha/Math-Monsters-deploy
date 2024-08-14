@@ -71,15 +71,14 @@ const Home = () => {
     <div className="home-page-container">
       <div className="header">
         <img
+          className="logo"
           tabIndex={0}
           src={logoName}
-          width="960px"
-          height="380px"
           alt="Math Monsters"
           aria-label="Math Monsters logo"
           role="img"
         />
-        <div className="character-info" style={{ margin: '0 20px 20px 0' }}>
+        <div className="character-info">
           <img
             tabIndex={0}
             role="button"
@@ -96,7 +95,6 @@ const Home = () => {
           <div
             aria-live="assertive"
             className="announcement"
-            style={{ color: 'white'}}
             role="alert"
           >
             {announcement}
@@ -130,39 +128,35 @@ const Home = () => {
           aria-label="Iniciar juego"
         >
           <img
+            className="boton-iniciar"
             src={botonIniciar}
             alt="Iniciar juego"
-            width="505px"
-            height="127px"
           />
           
         </div>
         {character === "PRINCESA" && (
         <img
+          className="personaje-seleccionado"
           tabIndex={0}
           src={Princess}
-          width="227px"
-          height="320px"
           alt="Princesa"
           role="img"
         />
       )}
       {character === "CABALLERO" && (
         <img
+          className="personaje-seleccionado"
           tabIndex={0}
           src={Knight}
-          width="227px"
-          height="320px"
           alt="Caballero"
           role="img"
         />
       )}
       {character === "DINOSAURIO" && (
         <img
+          className="personaje-seleccionado"
           tabIndex={0}
           src={Dino}
-          width="227px"
-          height="320px"
           alt="Dinosaurio"
           role="img"
         />

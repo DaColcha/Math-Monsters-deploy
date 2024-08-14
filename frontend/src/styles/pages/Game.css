@@ -8,15 +8,23 @@
 
 .go-back {
   position: absolute;
-  top: 50px;
-  left: 50px;
-  padding: 15px 15px;
-  background-color: #ffffff00;
-  border: 1px solid #fffb00;
-  color: #FFFFFF;
+  top: 10px;
+  left: 10px;
+  padding: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #5A361D00;
+  border: none;
+  color: #FFEA81;
   border-radius: 10px;
-  box-shadow: #fffb00 0 0 10px;
 }
+
+.go-back:hover, .go-back:focus {  
+  box-shadow: #ffffff  0px 0px 10px;
+  background-color: #FFEA81;
+  color: #000;
+  border: 1px solid #fff;
+} 
 
 .chest-selection {
   display: flex;
@@ -27,8 +35,8 @@
 }
 
 .chest-selection h1 {
-  color: #FFFFff;
-  text-shadow: #ffffff 0px 0px 3px;
+  color: #FFF;
+  font-size: 2.2rem;
 }
 
 .chests-container {
@@ -55,18 +63,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 150px;
-  background-color: #F39C12;
+  width: 200px;
+  background-color: #00000088;
   border-radius: 15px;
   box-shadow: #ffffff88 0px 0px 10px;
   border: 2px solid #fffb00;
   padding: 10px;
   font-weight: bold;
-  color: #FFFFFF;
+  font-size: 1.1rem;
+  color: #fff;
 }
 
 .character {
-  height: 150px;
+  height: 130px;
   object-fit: contain;
 }
 
@@ -76,11 +85,12 @@
   color: #ffffff;
   font-weight: bold;
   padding: 10px;
-  background-color: #F39C12;
+  background-color: #00000088;
   border-radius: 10px;
   box-shadow: #ffffff88 0px 0px 10px;
   border: 2px solid #fffb00;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
