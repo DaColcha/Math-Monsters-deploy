@@ -40,9 +40,10 @@ export const CustomModal = ({ isOpen, onCloseModal }: ModalProps) => {
             ¡Bienvenido a Math Monsters!
           </h2>
           <p className="paragraph" id="modalDescription" >
-            Este es un juego creado para que practiques tus habilidades en
-            Matemáticas sobre progresiones aritméticas y geométricas. Da clic
-            en el botón Iniciar y diviértete.
+            Existen 9 cofres que pueden contener monedas o monstruos. 
+            Si abres un cofre con un monstruo, deberás responder una pregunta de matemáticas para vencerlo. 
+            Acumula el mayor número de monedas. Presiona la teclas según el numero del cofre o utiliza el mouse.
+            ¡Buena suerte!
           </p>
           <p className="footer" tabIndex={0}>Creado por: Guns & Coders</p>
         </div>

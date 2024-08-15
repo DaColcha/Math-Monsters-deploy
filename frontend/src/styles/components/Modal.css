@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 280px;
-  padding: 13px;
+  padding: 8px 13px;
 }
 
 .info-text h2 {
@@ -28,7 +28,8 @@
   font-size: 55px;
   font-style: normal;
   font-weight: 400;
-
+  margin-bottom: 8px;
+  margin-top: 5px;
   text-shadow: 3px 3px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 
 }
