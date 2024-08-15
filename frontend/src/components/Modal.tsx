@@ -35,17 +35,17 @@ export const CustomModal = ({ isOpen, onCloseModal }: ModalProps) => {
         aria-describedby="modalDescription"
         aria-modal="true"
       >
-        <div className="info-text" tabIndex={0}>
-          <h2 id="modalTitle">
+        <div className="info-text" tabIndex={0} role="none">
+          <h2 id="modalTitle" tabIndex={0} role="none">
             ¡Bienvenido a Math Monsters!
           </h2>
-          <p className="paragraph" id="modalDescription" >
+          <p className="paragraph" id="modalDescription" tabIndex={0} role="none">
             Existen 9 cofres que pueden contener monedas o monstruos. 
             Si abres un cofre con un monstruo, deberás responder una pregunta de matemáticas para vencerlo. 
             Acumula el mayor número de monedas. Presiona la teclas según el numero del cofre o utiliza el mouse.
             ¡Buena suerte!
           </p>
-          <p className="footer" tabIndex={0}>Creado por: Guns & Coders</p>
+          <p className="footer" tabIndex={0} role="none">Creado por: Guns & Coders</p>
         </div>
       </Modal>
     </div>
