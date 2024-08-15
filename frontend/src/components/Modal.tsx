@@ -42,7 +42,7 @@ export const CustomModal = ({ isOpen, onCloseModal }: ModalProps) => {
           <p className="paragraph" id="modalDescription" tabIndex={0} role="none">
             Existen 9 cofres que pueden contener monedas o monstruos. 
             Si abres un cofre con un monstruo, deberás responder una pregunta de matemáticas para vencerlo. 
-            Acumula el mayor número de monedas. Presiona la teclas según el numero del cofre o utiliza el mouse.
+            Acumula el mayor número de monedas. Presiona la teclas según el número del cofre o utiliza el ratón.
             ¡Buena suerte!
           </p>
           <p className="footer" tabIndex={0} role="none">Creado por: Guns & Coders</p>
